@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style type="text/css">
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #defdc4;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+section {
+    padding: 50px;
+    text-align: left;
+}
+
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+}
+
+.gallery img {
+    width: 200px;
+    height: 250px;
+    margin: 10px;
+}
+
+    </style>
+    <title>My Portfolio</title>
+    
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#Photo">Photo</a></li>
+                <li><a href="#skills">skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <h1>Welcome to My Portfolio</h1>
+        <p>Front-end Developer &amp; Designer</p>
+    </section>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <section id="about">
+            
+            <p>Hi there! My name is Sarveshvaran and I hail from the beautiful town of Musri.<br><br> I have a passion for fitness, and you'll find me dedicatedly hitting the gym every day to stay in shape and maintain a healthy lifestyle.
+                <br><br> Exploring new places, trying out different cuisines, and creating wonderful memories together are some of the things that bring me immense joy.
+                <br><br>I absolutely love spending time outdoors, especially when I'm with my friends
+                <br> <br>Aside from my active lifestyle, I have a couple of hobbies that keep me entertained. <br><br>I'm an avid gamer, and you can often find me engrossed in the virtual world, challenging myself in various games.<br><br> On lazy days, I enjoy unwinding by watching TV shows and movies, immersing myself in gripping stories and fascinating characters.</p>
+        
+        
+    </section>
+
+    <section id="Photo">
+        <h2>Photo</h2>
+        <div class="gallery">
+            <!-- Your portfolio items go here -->
+            <img src="sar.jpg">
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2>skills</h2>
+        <li> HTML </li>
+        <li> CSS </li>
+        <li> Javascript </li>
+    </section
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>Email:gokulgokul2504@gmail.com</p>
+    </section>
+       
+          <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click',function(e){
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+
+                if(targetElement){
+                    window.scrollTo({
+                        top: targetElement.offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
